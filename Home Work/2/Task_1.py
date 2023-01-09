@@ -17,3 +17,6 @@ def SumNumber(n):
 print('Введите число: ')
 num = float(input())
 print(f"Сумма цифр = {SumNumber(num)}")
+
+
+print(sum(map(int, list(input("Введите дробное число: ").replace(".", "")))))
