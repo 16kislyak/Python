@@ -11,3 +11,7 @@
 # 160, 168, 180, 189, 200, 210, 220, 231, 240, 252, 260, 273, 280,
 # 294, 300, 315, 320, 336, 340, 357, 360, 378, 380, 399, 400, 420]
 
+N = int(input('Введите число: '))
+list = list(range(20, N+1))
+find_list = [val for i, val in enumerate(list) if val % 20 == 0 or val % 21 == 0]
+print(find_list)
