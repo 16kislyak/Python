@@ -5,4 +5,14 @@
 # out
 # {'А': ['Алина'], 'Б': ['Бибочка'], 'И': ['Иван', 'Илья'], 'М': ['Марина', 'Мария'], 'П': ['Петр', 'Петр']}
 
+def dictionary(*args):
+    diction = {}
+    for i in sorted(args):
+        symbol = i[0]
+        if symbol not in diction:
+            diction[symbol] = [i]
+        elif symbol in diction:
+            diction[symbol] += [i]
+    return diction
 
+print(dictionary("Иван", "Мария", "Петр", "Илья", "Марина", "Петр", "Алина", "Бибочка"))
